@@ -2,15 +2,15 @@
 const items = [
   {
     name: "Inicio",
-    link: "#",
+    link: "#home",
   },
   {
     name: "Sobre nosotros",
-    link: "#",
+    link: "#about",
   },
   {
     name: "Miembros",
-    link: "#",
+    link: "#members",
   },
   {
     name: "Servicios",
@@ -26,6 +26,9 @@ const items = [
 <html lang="es">
   <head>
     <meta charset="utf-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -99,6 +102,11 @@ const items = [
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+
+  body{
+    background-color: rgb(214, 213, 211);
   }
 
   header {
