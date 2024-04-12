@@ -27,9 +27,13 @@ const items = [
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"  rel="stylesheet" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>PeluqueríApp</title>
+    <title>BarberíApp</title>
   </head>
   <body>
     <header class="w-full h-[80px]">
@@ -37,7 +41,7 @@ const items = [
         class="flex justify-between items-center w-[90%] max-w-7xl my-0 mx-auto h-full"
       >
         <h1 class="text-3xl text-white font-semibold md:flex-[40%]">
-          PeluqueríApp💈
+          BarberíApp💈
         </h1>
 
         <button
@@ -46,7 +50,7 @@ const items = [
         >
           <figure class="w-[40px] h-[40px]">
             <img
-              src="../../assets/icons/Menu.svg"
+              src="../assets/icons/Menu.svg"
               alt="Icono de menú de hamburguesa"
               class="w-full h-full"
             />
@@ -69,7 +73,7 @@ const items = [
 
       </div>
 
-	  <nav class="menu-mobile-active lg:hidden" id="menu-container">
+	  <nav class="menu-mobile-hidden lg:hidden" id="menu-container">
 		<ul>
 		  {
 			items.map((item) => (
@@ -82,9 +86,11 @@ const items = [
 	  </nav>
     </header>
 
-    <main class="h-400px bg-green-500 w-full">
+    <main class="my-[80px]">
       <slot />
     </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
   </body>
 </html>
 
@@ -96,10 +102,12 @@ const items = [
   }
 
   header {
-	background: #0F2027;  
-	background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  
-	background: linear-gradient(to right, #2C5364, #203A43, #0F2027); 
-	position: relative;
+    background: #780206;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #061161, #780206);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #061161, #780206); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+	position: fixed;
+  top: 0;
 	z-index: 100;
   }
 
@@ -139,6 +147,8 @@ const items = [
   btn.addEventListener("click", () => {
     menu.classList.toggle("menu-mobile-hidden");
   });
+
+
 
   item.forEach((element) => {
     element.addEventListener("click", () => {
