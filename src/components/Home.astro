@@ -1,0 +1,53 @@
+---
+
+---
+
+<section class="home" id="home">
+    <article class="w-[90%] mx-auto flex flex-col items-center h-full justify-center gap-5">
+        <h2 class="">BarberíApp</h2>
+        <span class="text-4xl lg:text-6xl">✂️</span>
+        <h3 class="text-white text-xl font-semibold lg:text-2xl">
+            La mejor opción para tu estilo
+        </h3>
+        
+        <a
+        href="#" 
+        class="text-white transition-all hover:bg-[#1d92d6] bg-[#8e1515] hover:scale-110 font-bold rounded-lg px-5 py-3 lg:text-2xl lg:px-8 lg:py-5 flex justify-center items-center gap-4 my-12">
+            Agenda cita
+            <figure>
+                <img src="../../assets/icons/Check.svg" alt="ícono de verificación">
+            </figure> 
+        </a>
+    </article>
+</section>
+
+<style>
+    .home {
+        background-image: 
+        linear-gradient(rgba(23, 19, 19, 0.711), 
+        rgba(9, 57, 102, 0.199)), url(../../assets/background-header.jpg);
+        background-position: center;
+        background-size: cover;
+        height: 70vh;
+    }
+
+    .home > article > h2 {
+        font-family: "Lobster", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        color: white;
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    @media( min-width: 1024px) {
+        .home{
+            background-position: top;
+            clip-path: polygon(50% 100%, 100% 80%, 100% 0, 0 0, 0 80%);
+        }
+
+        .home > article > h2 {
+            font-size: 6rem;
+        }
+    }
+</style>
