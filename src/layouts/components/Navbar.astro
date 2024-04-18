@@ -1,0 +1,137 @@
+---
+const items = [
+  {
+    name: "Inicio",
+    link: "#home",
+  },
+  {
+    name: "Sobre nosotros",
+    link: "#about",
+  },
+  {
+    name: "Miembros",
+    link: "#members",
+  },
+  {
+    name: "Servicios",
+    link: "#service",
+  },
+  {
+    name: "Reserva",
+    link: "#contact",
+  },
+];
+---
+
+<header class="w-full h-[80px]">
+    <div
+      class="flex justify-between items-center w-[90%] max-w-7xl my-0 mx-auto h-full"
+    >
+      <h1 class="text-3xl text-white font-semibold md:flex-[40%]">
+        BarberíApp💈
+      </h1>
+
+      <button
+        class="bg-white absolute right-[1em] rounded-md hover:bg-gray-300 overflow-hidden lg:hidden"
+        id="btn-menu"
+      >
+        <figure class="w-[40px] h-[40px]">
+          <img
+            src="../assets/icons/Menu.svg"
+            alt="Icono de menú de hamburguesa"
+            class="w-full h-full"
+          />
+        </figure>
+      </button>
+
+      <nav class="hidden lg:flex lg:flex-[60%] w-full h-full">
+        <ul
+          class="flex text-white xl:text-xl justify-between items-center w-full h-full"
+        >
+          {
+            items.map((item) => (
+              <a href={item.link} class="hover:cursor-pointer">
+                <li class="menu-item hover:text-blue-600">{item.name}</li>
+              </a>
+            ))
+          }
+        </ul>
+      </nav>
+
+    </div>
+
+    <nav class="menu-mobile-hidden lg:hidden" id="menu-container">
+      <ul>
+        {
+          items.map((item) => (
+            <a href={item.link}>
+              <li class="menu-item hover:text-blue-600">{item.name}</li>
+            </a>
+          ))
+        }
+      </ul>
+    </nav>
+  </header>
+
+
+  <style>
+    header {
+    background: #780206;  
+    background: -webkit-linear-gradient(to right, #061161, #780206);  
+    background: linear-gradient(to right, #061161, #780206); 
+    position: fixed;
+    top: 0;
+    z-index: 100;
+  }
+
+  h1{
+    font-family: "Bebas Neue", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  .menu-mobile-active {
+	background-image: url(../../assets/background-menu-mobile.png);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+    padding: 1em 2em;
+    transform: translateX(0px);
+    transition: transform ease-in-out 0.1s;
+    text-align: center;
+	box-shadow: 0px 10px 15px black;
+  }
+
+  .menu-mobile-active > ul > a > li {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-top: 1em;
+  }
+
+  .menu-mobile-active > ul > a > li:hover {
+    color: rgb(26, 187, 211);
+  }
+
+  .menu-mobile-hidden {
+    transform: translateX(-1200px);
+    transition: transform ease-in-out 0.3s;
+  }
+  </style>
+
+<script>
+    const btn = document.getElementById("btn-menu");
+    const menu = document.getElementById("menu-container");
+    const item = document.querySelectorAll(".menu-item");
+  
+    btn.addEventListener("click", () => {
+      menu.classList.toggle("menu-mobile-hidden");
+    });
+  
+  
+  
+    item.forEach((element) => {
+      element.addEventListener("click", () => {
+        menu.classList.toggle("menu-mobile-hidden");
+      });
+    });
+</script>

@@ -1,0 +1,212 @@
+---
+
+---
+
+<div class="information-container">
+    <div class="ubication-container">
+        <h3 class="ubication-title">UBICACIÓN</h3>
+
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127450.08734972654!2d-76.60806505581098!3d3.395232264740365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a6f0cc4bb3f1%3A0x1f0fb5e952ae6168!2sCali%2C%20Valle%20del%20Cauca!5e0!3m2!1ses!2sco!4v1713454274153!5m2!1ses!2sco"
+            width="auto"
+            height="auto"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            id="ubication-map" >
+        </iframe>
+    </div>
+    <div class="social-container">
+        <h3 class="social-title">SÍGUENOS</h3>
+        <figure class="social-icon-image">
+            <img src="../../../../assets/icons/Facebook.svg" alt="Logo de Facebook" class="social-icon-img face">
+            <img src="../../../../assets/icons/Instagram.svg" alt="Logo de Instagram" class="social-icon-img insta">
+            <img src="../../../../assets/icons/Tiktok.svg" alt="Logo de Tiktok" class="social-icon-img tiktok">
+        </figure>
+    </div>
+</div>
+
+<style>
+    .information-container {
+        border-top: white 1px solid;
+        padding: 2em 0 0;
+        margin-top: 2em;
+        width: 100%;
+    }
+
+    .ubication-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: .5em;
+    }
+
+    .ubication-title {
+        font-size: 1.2rem;
+        font-weight: 400;
+        letter-spacing: 4px;
+    }
+
+    #ubication-map {
+        border-radius: 6px;
+        width: 100%;
+        max-width: 768px;
+        height: 250px;
+    }
+
+    .social-container {
+        display: flex;
+        width: 100%;
+        max-width: 768px;
+        margin: 1.5em auto 0;
+        justify-content: space-between;
+    }
+
+    .social-title {
+        font-size: 1.2rem;
+        font-weight: 400;
+        letter-spacing: 4px;
+        flex: 70%;
+    }
+
+    .social-icon-image {
+        display: flex;
+        flex: 30%;
+        max-width: 100px;
+        justify-content: space-between;
+    }
+
+    .social-icon-img {
+        background-color: white;
+        border-radius: 6px;
+    }
+
+
+    @media( min-width: 768px ) {
+
+        .information-container {
+            display: flex;
+            gap: 1em;
+        }
+
+        .ubication-container {
+            flex: 1;
+        }
+
+        .ubication-title {
+            font-size: 1.5rem;
+        }
+
+        #ubication-map {
+            max-width: auto;
+            height: 300px;
+        }
+
+        .social-container {
+            flex: 1;
+            flex-direction: column;
+            align-items: center;
+            justify-content: start;
+            max-width: auto;
+            margin: 0;
+        }
+
+        .social-title {
+            font-size: 1.5rem;
+            flex: none;
+        }
+
+        .social-icon-image {
+            flex: none;
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
+            place-items: center;
+            margin-top: 4em;
+            width: 100%;
+            max-width: 200px;
+            gap: .5em;
+        }
+
+        .social-icon-img {
+            background-color: white;
+            border-radius: 6px;
+            width: 60px;
+        }
+
+        .insta{
+            grid-column: 2/3;
+            grid-row: 2/3;
+        }
+
+        .tiktok{
+            grid-columns: 3/4;
+            grid-row: 1/2;
+        }
+
+        .face {
+            grid-column: 3/4;
+        }
+    }
+    
+    @media( min-width: 1024px ) {
+        
+    .information-container {
+        border-top: none;
+        flex-direction: column;
+        flex: 1;
+        padding: 0;
+        margin-top: 1em;
+    }
+
+    .ubication-container {
+        gap: 1.5em;
+    }
+
+    .ubication-title {
+        font-size: 2rem;
+    }
+
+    #ubication-map {
+        max-width: 400px;
+        height: 200px;
+    }
+
+    .social-container {
+        display: flex;
+        height: 100px;
+        width: 100%;
+        max-width: 768px;
+        margin: 1em auto 0;
+        justify-content: center;
+    }
+
+    .social-title {
+        margin-top: 0em;
+        font-size: 1.7rem;
+    }
+
+    .social-icon-image {
+        display: flex;
+        grid-template-rows: none;
+        grid-template-columns: none;
+        place-items: initial;
+        margin-top: 1em;
+        width: 100%;
+        max-width: 250px;
+        gap: 0em;
+    }
+
+    .social-icon-img {
+        background-color: white;
+        border-radius: 6px;
+        width: 60px;
+    }      
+    }
+</style>
+
+
+
+

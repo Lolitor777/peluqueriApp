@@ -1,0 +1,44 @@
+---
+import { FormContact } from './components/FormContact'
+import InformationContact from './components/InformationContact.astro'
+---
+
+<section id="contact" class="contact-container">
+    <div class="contact-container-child">
+        <InformationContact />
+        <FormContact client:visible />
+    </div>
+</section>
+
+
+<style>
+    .contact-container {
+        margin-top: 2em;
+        padding: 1.5em 0;
+        width: 100%;
+        color: white;
+        background-color: #242323;
+    }
+
+    .contact-container-child {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+
+    @media( min-width: 1024px ) {
+
+        .contact-container {
+            margin-top: 6em;
+        }
+
+        .contact-container-child {
+            max-width: 1200px;
+            flex-direction: row;
+            gap: 1.5em;
+        }
+    }
+
+</style>

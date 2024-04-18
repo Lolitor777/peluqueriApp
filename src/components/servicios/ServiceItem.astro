@@ -9,9 +9,6 @@ const { name, image } = Astro.props;
 
 <div class="item-content">
     <h3 class="item-title">{ name }</h3>
-        <a href="#" class="item-link">
-            Entra
-        </a>
 </div>
 
 
@@ -20,7 +17,9 @@ const { name, image } = Astro.props;
 
 
 <style>
-    
+    @import url('https://fonts.googleapis.com/css2?family=Sedan:ital@0;1&display=swap');
+
+
     .item-image {
         width: auto;
         height: auto;
@@ -54,35 +53,19 @@ const { name, image } = Astro.props;
     .item-title {
         color: white;
         text-align: center;
-        font-size: 1.5rem;
-    }
-
-    .item-link {
-        color: rgb(219, 117, 22);
-        font-size: 1.2rem;
-        text-decoration: underline;
-        font-weight: 600;
-    }
-
-    .item-link:hover {
-        color: white;
+        font-size: 2rem;
+        font-family: "Sedan", serif;
+        font-weight: 300;
+        font-style: normal;
     }
 
     @media( min-width: 768px ) {
         .item-title {
         color: white;
         text-align: center;
-        font-size: 2rem;
+        font-size: 2.3rem;
     }
 
-    .item-link {
-        color: rgb(255, 21, 0);
-        font-size: 1.5rem;
-        text-decoration: underline;
-        font-weight: 600;
     }
-    }
-
-
 
 </style>
