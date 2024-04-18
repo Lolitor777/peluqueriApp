@@ -37,7 +37,7 @@ const items = [
       >
         <figure class="w-[40px] h-[40px]">
           <img
-            src="../assets/icons/Menu.svg"
+            src="icons/Menu.svg"
             alt="Icono de menú de hamburguesa"
             class="w-full h-full"
           />
@@ -60,7 +60,7 @@ const items = [
 
     </div>
 
-    <nav class="menu-mobile-hidden lg:hidden" id="menu-container">
+    <nav class="menu-mobile-active lg:hidden" id="menu-container">
       <ul>
         {
           items.map((item) => (
@@ -91,7 +91,7 @@ const items = [
   }
 
   .menu-mobile-active {
-	background-image: url(../../assets/background-menu-mobile.png);
+	background-image: url(/background-menu-mobile.png);
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
