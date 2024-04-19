@@ -9,7 +9,7 @@ const customStyles = {
       bottom: 'auto',
       marginRight: '-50%',
       transform: 'translate(-50%, -50%)',
-      width: '400px'
+      width: '400px',
     },
   };
 
@@ -20,6 +20,7 @@ export const FormModal = ({ modalIsOpen, closeModal, data }) => {
     <div>
       <Modal
         isOpen={modalIsOpen}
+        ariaHideApp={ false }
         onRequestClose={closeModal}
         style={customStyles}
         contentLabel="Example Modal"
@@ -28,7 +29,7 @@ export const FormModal = ({ modalIsOpen, closeModal, data }) => {
         <p className='text-lg text-center'>En breve te contactaremos al número <span className='text-blue-600 font-semibold'>{ data.phone }</span> para agendar tu cita.</p>
         <button 
         onClick={closeModal}
-        className='bg-red-500 hover:bg-red-400 font-semibold py-2 px-4 rounded-lg block mx-auto mt-10'>Cerrar</button>
+        className='bg-green-500 hover:bg-green-400 font-semibold py-2 px-4 rounded-lg block mx-auto mt-10 text-white hover:text-black'>Cerrar</button>
       </Modal>
     </div>
   )
