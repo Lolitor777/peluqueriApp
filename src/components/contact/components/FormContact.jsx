@@ -33,6 +33,7 @@ export const FormContact = () => {
 
 
   return (
+    <>
     <Formik
       initialValues={{
         name: '',
@@ -132,11 +133,11 @@ export const FormContact = () => {
           >
             Reservar
           </button>
-          <FormModal modalIsOpen={modalIsOpen} closeModal={closeModal} data={ data } />
         </form>
       )}
-
-      
     </Formik>
+    
+    <FormModal modalIsOpen={modalIsOpen} closeModal={closeModal} data={ data } />
+    </>
   )
 }

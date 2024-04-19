@@ -60,7 +60,7 @@ const items = [
 
     </div>
 
-    <nav class="menu-mobile-active lg:hidden" id="menu-container">
+    <nav class="menu-mobile-hidden lg:hidden" id="menu-container">
       <ul>
         {
           items.map((item) => (
@@ -90,31 +90,31 @@ const items = [
     font-weight: 400;
   }
 
-  .menu-mobile-active {
-	background-image: url(/background-menu-mobile.png);
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
+  .menu-mobile-hidden {
+    background-image: url(/background-menu-mobile.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     padding: 1em 2em;
-    transform: translateX(0px);
-    transition: transform ease-in-out 0.1s;
+    transform: translateX(-1200px);
+    transition: transform ease-in-out 0.3s;
     text-align: center;
-	box-shadow: 0px 10px 15px black;
+	  box-shadow: 0px 10px 15px black;
   }
 
-  .menu-mobile-active > ul > a > li {
+  .menu-mobile-hidden > ul > a > li {
     font-size: 1.2rem;
     font-weight: 500;
     margin-top: 1em;
   }
 
-  .menu-mobile-active > ul > a > li:hover {
+  .menu-mobile-hidden > ul > a > li:hover {
     color: rgb(26, 187, 211);
   }
 
-  .menu-mobile-hidden {
-    transform: translateX(-1200px);
-    transition: transform ease-in-out 0.3s;
+  .menu-mobile-active {
+    transform: translateX(0px);
+    transition: transform ease-in-out 0.1s;
   }
   </style>
 
@@ -124,14 +124,14 @@ const items = [
     const item = document.querySelectorAll(".menu-item");
   
     btn.addEventListener("click", () => {
-      menu.classList.toggle("menu-mobile-hidden");
+      menu.classList.toggle("menu-mobile-active");
     });
   
   
   
     item.forEach((element) => {
       element.addEventListener("click", () => {
-        menu.classList.toggle("menu-mobile-hidden");
+        menu.classList.toggle("menu-mobile-active");
       });
     });
 </script>
